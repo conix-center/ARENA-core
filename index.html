@@ -18,6 +18,8 @@
     <!-- the AFrame script library (minified) -->
     <!-- master version: cutting edge but may have bugs -->
     <script src="aframe/dist/aframe-master.js"></script>
+    <script src="https://unpkg.com/aframe-forcegraph-component/dist/aframe-forcegraph-component.min.js"></script>
+    <!-- https://github.com/vasturiano/aframe-forcegraph-component -->
 
     <!-- aframe-extras gives ability to play other model formats -->
     <!-- from https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.js -->
@@ -166,6 +168,9 @@
         <a-light position="-0.272 0.39 1.25" name="PointLight2" type="point" color="#C2E6C7"></a-light>
         <a-light name="AmbientLight" type="ambient" color="#363942"></a-light>
       </a-entity>
+
+      <a-entity forcegraph="json-url: myGraphData.json; node-label: id; node-auto-color-by: group; link-directional-arrow-length: 1.5; link-directional-arrow-rel-pos: 1;"></a-entity>
+
     </a-scene>
     <video src="" id="localVideo" muted="muted" volume="0" autoplay="true" playsinline="true" crossorigin="anonymous"></video>
     <div id="gltf-loading"></div>
